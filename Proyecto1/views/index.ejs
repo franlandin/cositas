@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+
+    <title>Home</title>
+</head>
+<body>
+        <%- include('includes/navbar.ejs') %>
+        <main>
+                <% if (pets.length > 0) { %>
+                    <div class="container fluid" style="text-align:center">
+                        <% for (let pet of pets) { %>                            
+                            <div class="card small" style="display: inline-block ">
+                                <img class="card-img-top" src="<%= pet.imageUrl %>"
+                                alt="<%= pet.name %>" style="width:100%">
+                                <div class="card-body">
+                                  <h4 class="pet__name"><%= pet.pet_name %></h4>
+                                  <p class="card-text"><%= pet.price %> $</p>
+                                  <p class="card-text"><%= pet.pet_description %></p>
+                                  <a href="/edit-pet/<%= pet.rent_pet_id %>" class="btn btn-primary">Editar</a>
+                                  <a href="/rent-pet/<%= pet.rent_pet_id %>" class="btn btn-primary">Alquilar</a>
+                                </div>
+                              </div>
+                        <% } %>
+                    </div>
+                <% } else { %>
+                    <h1>No Pets Found!</h1>
+                <% } %>
+            </main>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" type="text/css" href="/css/forms.css">       
+    <title>Document</title>
+</head>
+<body>
+    <%- include('includes/navbar.ejs') %>
+
+    <form action="/edit-pet/<%= pet.rent_pet_id %>" method="POST">
+        <div class="form-group row">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control col-xs-2" id="name" name="name" value="<%= pet.pet_name %>">
+        </div>
+        <div class="form-group row">
+            <label for="refugee">Refugio</label>
+            <input type="text" class="form-control col-xs-2" id="refugee" name="refugee" value="<%= pet.refugee %>">
+        </div>
+        <div class="form-group row">
+            <label for="city">Ciudad</label>
+            <input type="text" class="form-control col-xs-2" id="city" name="city" value="<%= pet.city %>">
+        </div>
+        <div class="form-group row">
+            <label for="price">Precio</label>
+            <input type="number" class="form-control col-xs-2" id="price" name="price" value="<%= pet.price %>">
+        </div>
+        <div class="form-group row">
+            <label for="imageUrl">Foto (enlace)</label>
+            <input type="url" class="form-control col-xs-2" id="imageUrl" name="imageUrl" value="<%= pet.imageUrl %>">
+        </div>
+        <div class="form-group row">
+            <label for="Descripcion">Descripcion</label>
+            <input type="text" class="form-control col-xs-2"  rows="3" name="description" value="<%= pet.pet_description %>">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+<!--
+    </form>
+        <form action="/edit-pet/<%= pet.rent_pet_id %>" method="POST">
+
+                    
+            Nombre: <input type="text" name="name" value="<%= pet.pet_name %>"> 
+
+            Refugio: <input type="text" name="refugee" value="<%= pet.refugee %>">
+
+            Ciudad: <input type="text" name="city" value="<%= pet.city %>">
+
+            Disponibilidad: <input type="boolean" name="available" value="<%= pet.available %>">
+
+            Precio :<input type="number" name="price" value="<%= pet.price %>"> 
+
+            Foto(enlace): <input type="text" name="imageUrl" value="<%= pet.imageUrl %>">
+
+            Descripcion: <input type="text" name="description" value="<%= pet.pet_description %>">
+
+            <input type="submit" class="btn" value="Send!">
+        </form>
+-->
+        <form action="/edit-pet/<%= pet.rent_pet_id %>/delete" method="POST">
+            <input type="submit" class="btn btn-danger" bg-color value="Borrar">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+    <title>Add pets</title>
+</head>
+<body>
+    <%- include('includes/navbar.ejs') %>
+        <form action="/add-pets" method="POST">
+                    
+            Nombre: <input type="text" name="name"> 
+
+            Refugio: <input type="text" name="refugee">
+
+            Ciudad: <input type="text" name="city">
+
+            Disponibilidad: <input type="boolean" name="available">
+
+            Precio :<input type="number" name="price"> 
+
+            Foto(enlace): <input type="text" name="imageUrl">
+
+            Descripcion: <input type="text" name="description">
+
+            <input type="submit" class="btn" value="Send!">
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "proyecto1",
+  "version": "1.0.0",
+  "description": "Proyecto 1 codespace",
+  "main": "app.js",
+  "scripts": {
+    "test": "",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Francisco Landin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.6.1",
+    "pug": "^2.0.3"
+  }
+}
